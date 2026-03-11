@@ -1,9 +1,6 @@
 # SKILL .md Template
-## 1. YAML Frontmatter
 
-Every SKILL.md **must** start with YAML frontmatter between `---` markers:
 
-```yaml
 ---
 name: <skill-name>                  # Required. 1-64 chars, lowercase, alphanumeric + hyphens.
                                     # MUST match the containing folder name exactly!
@@ -15,7 +12,9 @@ argument-hint: '<Short hint shown when invoked via slash command>'   # Optional
 user-invocable: true                # Optional (default: true). Set false to hide from `/` menu.
 disable-model-invocation: false     # Optional (default: false). Set true to prevent auto-loading.
 ---
-```
+## 1. ^^^ YAML Frontmatter
+
+Every SKILL.md **must** start with YAML frontmatter between `---` markers:
 
 ## 2. Folder Structure
 ```markdown

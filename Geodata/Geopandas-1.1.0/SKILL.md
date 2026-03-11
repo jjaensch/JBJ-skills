@@ -18,9 +18,10 @@ This skill infuses Github Copilot with reference materials and coding guidance s
 
 ### Procedure
 1. Identify which GeoPandas concepts the user's question involves (I/O, spatial ops, CRS, plotting, etc.).
-2. List files in the relevant reference subdirectory- Advanced-guide, User-guide, API-references - then read the most applicable one.
-3. Construct the answer using version 1.1.0 APIs — cite which reference file was consulted.
-4. If the answer involves packages beyond GeoPandas, name them explicitly.
+2. Read [INDEX.md](./references/INDEX.md) to identify which reference files are relevant to the question.
+3. Load **all** matching files — most questions need at least one from API-references and one from User-guide.
+4. Construct the answer using version 1.1.0 APIs — cite which reference files were consulted.
+5. If the answer involves packages beyond GeoPandas, name them explicitly.
 
 
 ### Notes / Constraints 
