@@ -1,8 +1,4 @@
 # SKILL .md Template
-> Replace all `<placeholders>` and example content with your own. Delete this instruction block when done.
-
----
-
 ## 1. YAML Frontmatter
 
 Every SKILL.md **must** start with YAML frontmatter between `---` markers:
@@ -22,15 +18,13 @@ disable-model-invocation: false     # Optional (default: false). Set true to pre
 ```
 
 ## 2. Folder Structure
----
-```
+```markdown
 .github/skills/<skill-name>/
 ├── SKILL.md            # Required — entry point (name + description + instructions)
 ├── scripts/            # Executable code the skill references
 ├── references/         # Supplementary docs loaded on demand
 └── assets/             # Templates, boilerplate, config files
 ```
----
 
 ## 3. Body Content — What to Include
 
