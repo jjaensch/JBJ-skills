@@ -4,7 +4,7 @@ description: 'Geopandas 1.1.0 reference and coding guidance. Use when: working w
 argument-hint: Infuse Geopandas 1.1.0 docs.
 user-invocable: true
 disable-model-invocation: false
----
+--- 
 
 # Skill contents for "Geopandas 1.1.0"
 
