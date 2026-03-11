@@ -1,0 +1,7 @@
+# Testing
+GeoPandas includes specific functions to test its objects.
+
+|Code|Functionality|
+|---|---|
+|testing.assert_geoseries_equal(left, right)| Test util for checking that two GeoSeries are equal.|
+|testing.assert_geodataframe_equal(left, right)| Check that two GeoDataFrames are equal.|
