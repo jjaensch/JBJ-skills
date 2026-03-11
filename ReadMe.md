@@ -4,7 +4,8 @@ Formålet er at hente dette repos som et subrepo til alle fretmidige projekter.
 Resultatet er en konsistent historik for agentisk udvikling og et highly maintanable repos. 
 
 # Add as submodule
-git submodule add https://github.com/jjaensch/JBJ-skills.git .github/skills/shared
+git submodule add https://github.com/jjaensch/JBJ-skills.git .github/shared
+Copilot discovers skills and agents on names, not paths.
 
 ## Using submodule
 No .gitignore needed. 
