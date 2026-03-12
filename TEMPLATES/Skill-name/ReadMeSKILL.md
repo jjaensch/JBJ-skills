@@ -1,6 +1,9 @@
-# ReadMe file is not needed, this is purely for template tutorial!!!
+# ReadMe file is not needed, this is purely for template tutorial
+
+!!!
 
 ## Progressive Loading
+
 The agent loads skills in three stages to conserve context tokens:
 
 1. **Discovery** (~100 tokens) — reads only `name` and `description` from frontmatter.
@@ -12,6 +15,7 @@ The agent loads skills in three stages to conserve context tokens:
 ---
 
 ## 5. Key Principles
+
 - **Keyword-rich descriptions** — include the exact words a user or agent would use to trigger the skill.
 - **Self-contained** — bundle everything needed to complete the task (scripts, templates, docs).
 - **Relative paths** — always use `./` when referencing skill resources.
@@ -20,8 +24,9 @@ The agent loads skills in three stages to conserve context tokens:
 ---
 
 ## 6. Anti-patterns to Avoid
+
 | Anti-pattern | Why it fails |
-|---|---|
+| --- | --- |
 | Vague description (`"A helpful skill"`) | Agent can't discover it — no trigger keywords |
 | Name ≠ folder name | Silent failure, skill never loads |
 | Monolithic SKILL.md (1 000+ lines) | Burns context window; use `./references/` instead |

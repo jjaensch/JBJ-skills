@@ -39,10 +39,9 @@ Bullet list of specific triggers / scenarios. Helps both humans and the agent de
 ### Procedure
 Numbered step-by-step instructions the agent follows. Reference bundled resources with relative paths:
 ```markdown
-1. Run [setup script](./scripts/setup.sh)
-2. Apply [config template](./assets/config.template.json)
-3. Validate output against [checklist](./references/checklist.md)
-```
+1. 
+2. 
+3. 
 
 ### Notes / Constraints *(optional)*
 Guard-rails, edge cases, or things to avoid.

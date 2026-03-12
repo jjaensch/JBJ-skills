@@ -1,4 +1,6 @@
-# ReadMe file is not needed, this is purely for template tutorial!!!
+# ReadMe file is not needed, this is purely for template tutorial
+
+!!!
 
 ## What Is a Custom Agent?
 
@@ -14,7 +16,7 @@ with its own tool restrictions and persona. The parent conversation stays clean.
 ## When to Use an Agent (Not a Skill)
 
 | Scenario | Why an Agent? |
-|---|---|
+| --- | --- |
 | Enforced read-only review | `tools: [read, search]` — physically can't edit files |
 | Role-based separation | "Planner" vs "Implementer" with different permissions |
 | Context isolation | Large analysis that would clutter the main conversation |
@@ -42,7 +44,7 @@ If the right trigger words aren't there, the agent will never be found or invoke
 ## Invocation Control
 
 | Setting | Default | Effect |
-|---|---|---|
+| --- | --- | --- |
 | `user-invocable: false` | `true` | Hidden from picker — only callable as a subagent |
 | `disable-model-invocation: true` | `false` | Cannot be auto-delegated — only manual invocation |
 
@@ -63,7 +65,7 @@ Combine both to create "internal-only" agents that a specific parent agent refer
 ## Anti-patterns to Avoid
 
 | Anti-pattern | Why it fails |
-|---|---|
+| --- | --- |
 | Vague description (`"A helpful agent"`) | No trigger keywords — never discovered or delegated to |
 | Too many tools | Dilutes focus; agent tries to do everything instead of its one job |
 | Role confusion (description ≠ body persona) | Parent delegates for wrong reasons; output doesn't match expectations |
@@ -101,7 +103,7 @@ Return a markdown table:
 
 ## Agent vs Skill vs Instructions — Quick Decision
 
-```
+```text
 Is this general guidance for ALL tasks?
   → copilot-instructions.md
 

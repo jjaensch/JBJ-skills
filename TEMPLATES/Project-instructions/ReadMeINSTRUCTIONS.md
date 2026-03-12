@@ -1,8 +1,12 @@
-# ReadMe file is not needed, this is purely for template tutorial!!!
----
-# copilot-instructions.md Template
+# ReadMe file is not needed, this is purely for template tutorial
 
-## 1. About This File
+!!!
+
+---
+
+## copilot-instructions.md Template
+
+### 1. About This File
 
 `copilot-instructions.md` contains **project-wide guidelines** that are automatically injected
 into every Copilot chat request across the workspace. No frontmatter needed — just Markdown.
@@ -14,7 +18,7 @@ into every Copilot chat request across the workspace. No frontmatter needed — 
 
 ---
 
-## 2. What to Include
+### 2. What to Include
 
 Only include what is relevant to *every* task in this project.
 Structure with the sections that apply — skip sections that don't add value.
@@ -53,7 +57,7 @@ Structure with the sections that apply — skip sections that don't add value.
 
 ---
 
-## 3. Tips for Writing Good Instructions
+### 3. Tips for Writing Good Instructions
 
 - **Be specific, not obvious** — don't repeat what linters already enforce.
 - **Link, don't embed** — reference `docs/TESTING.md` instead of copying it in.
@@ -63,6 +67,7 @@ Structure with the sections that apply — skip sections that don't add value.
 ---
 
 ---
+
 ## What Is copilot-instructions.md?
 
 This is the **always-on baseline** for your project. Every time Copilot processes a chat request
@@ -89,17 +94,18 @@ It is always loaded, unconditionally.
 Both serve the same purpose. Choose one:
 
 | File | Location | Strength |
-|---|---|---|
+| --- | --- | --- |
 | `copilot-instructions.md` | `.github/` | Cross-editor standard (VS Code, JetBrains, etc.) |
 | `AGENTS.md` | Root or subfolders | Supports monorepo hierarchy (closest file wins) |
 
 **Never use both** — they can conflict and produce unpredictable results.
 
 ### When to use AGENTS.md instead
+
 If your repo is a monorepo where `/frontend/` and `/backend/` need different rules,
 use nested `AGENTS.md` files:
 
-```
+```text
 /AGENTS.md              # Root defaults for the whole repo
 /frontend/AGENTS.md     # Overrides for frontend code
 /backend/AGENTS.md      # Overrides for backend code
@@ -112,6 +118,7 @@ For single-project repos, `copilot-instructions.md` is simpler and recommended.
 ## What Belongs Here (and What Doesn't)
 
 ### Good candidates
+
 - Language version and style (e.g. "Python 3.12+, Black formatter")
 - Architecture overview (e.g. "FastAPI + SQLAlchemy async")
 - Build/test/lint commands
@@ -120,6 +127,7 @@ For single-project repos, `copilot-instructions.md` is simpler and recommended.
 - Links to detailed docs (e.g. `See docs/TESTING.md`)
 
 ### Does NOT belong here
+
 - Instructions for specific tasks → use a **Skill** or **file instruction** instead
 - Obvious conventions already enforced by linters
 - Full documentation copied in → **link** to docs, don't embed
@@ -139,7 +147,7 @@ For single-project repos, `copilot-instructions.md` is simpler and recommended.
 ## Anti-patterns to Avoid
 
 | Anti-pattern | Why it fails |
-|---|---|
+| --- | --- |
 | Using both `copilot-instructions.md` AND `AGENTS.md` | Conflicting instructions, unpredictable behavior |
 | Kitchen-sink file (everything in one place) | Burns context tokens on irrelevant rules every request |
 | Duplicating the README | Redundant; the agent can already read your README if needed |
@@ -150,7 +158,7 @@ For single-project repos, `copilot-instructions.md` is simpler and recommended.
 
 ## Where This Fits in the Customization Stack
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │  copilot-instructions.md / AGENTS.md                │  Always on, every request
 ├─────────────────────────────────────────────────────┤
