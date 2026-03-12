@@ -37,3 +37,29 @@ if (Test-Path $agentSource) {
 }
 
 Write-Host "`nSetup complete. .github/ is gitignored and will not be committed."
+
+# --- Skills ---
+# Junction each skill folder into .github/skills/
+# (Junctions link directories, hardlinks only work on files)
+$skillsSource = Join-Path $root "Skills"
+$skillsTarget = Join-Path (Join-Path $root ".github") "skills"
+if (Test-Path $skillsSource) {
+    New-Item -ItemType Directory -Path $skillsTarget -Force | Out-Null
+
+    Get-ChildItem -Path $skillsSource -Directory | ForEach-Object {
+        $link = Join-Path $skillsTarget $_.Name
+        if (Test-Path $link) {
+            Write-Host "  skip (exists): $($_.Name)"
+        } else {
+            try {
+                New-Item -ItemType Junction -Path $link -Target $_.FullName -ErrorAction Stop | Out-Null
+                Write-Host "  linked: $($_.Name)"
+            } catch {
+                Write-Host "  FAILED: $($_.Name) - $($_.Exception.Message)" -ForegroundColor Red
+            }
+        }
+    }
+    Write-Host "Skills done."
+} else {
+    Write-Host "No Skills/ folder found - skipping."
+}
